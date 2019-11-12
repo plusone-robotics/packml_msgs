@@ -1,0 +1,7 @@
+# Increment Stat Service
+# Service to notify PackML to update a stat
+
+int32 metric   # ID of the stat to update
+float32 step   # Amount to add to the current total for the stat
+---
+# no response

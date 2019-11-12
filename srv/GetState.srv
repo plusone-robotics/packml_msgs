@@ -1,0 +1,9 @@
+# Get State Service
+# Gets current state from state controller
+# Used when PackML is functioning as a state observer
+
+# Empty Request
+---
+int32 state        # Current PackML state
+int32 substate     # non-standard state within standard PackML state (0 if no substate)
+int32 cycle        # UUID for current cycle of the state machine

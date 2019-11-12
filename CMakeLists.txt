@@ -5,19 +5,25 @@ find_package(catkin REQUIRED COMPONENTS message_generation std_msgs)
 add_message_files(
   DIRECTORY msg
   FILES
+    ItemizedStats.msg
     Mode.msg
     State.msg
     Stats.msg
     Status.msg
-    ItemizedStats.msg
 )
 
 add_service_files(
   DIRECTORY srv
   FILES
+    GetState.srv
+    GetStats.srv
+    IncrementStat.srv
+    InvokeStateChange.srv
+    LoadStats.srv
     ModeChange.srv
-    Transition.srv
     ResetStats.srv
+    SendCommand.srv
+    SendEvent.srv
 )
 
 
