@@ -1,0 +1,9 @@
+# Invoke State Change
+# Updates PackML use the desired state as the "current" state
+# Note: This violates the state machine, and will update timers only.
+#   It will not advance the underlying FSM state. Future events may trigger abnormal behavior.
+
+string name       # Name of the desired state
+int32 state_enum  # Enumeration of the desired state (See State.msg)
+---
+bool result       # True if state invocation succeeded, false otherwise

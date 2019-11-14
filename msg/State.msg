@@ -1,14 +1,11 @@
-# PackML State, based on the PackML standard, summarized here:
-# http://www.plcopen.org/pages/promotion/publications/downloads/mapping_omac_statediagram.pdf
+# PackML State, based on the PackML standard
 
-# Enumeration values are based upon tag guidelines, here:
-# http://sesam-world.com/_pdf/make2pack/mode/2010-11-29/Materiale/PackML_Tag_Naming_Guidelines_V2.0.pdf
-# Due to changes in the standard some states weren't enumerated.  I've made my best guess
-# below
+# Enumeration values are based upon OMAC Unit Machine Implementation Guide v1.00
+# (https://omac.org/workgroups/packml-unitmachine-implementation-guide/)
 
 # Values defined in tag naming guidelines
 int8 UNDEFINED = 0
-int8 OFF = 1            # Deleted in V3.0 of packml
+int8 CLEARING = 1
 int8 STOPPED = 2
 int8 STARTING = 3
 int8 IDLE = 4
@@ -19,14 +16,16 @@ int8 ABORTING = 8
 int8 ABORTED = 9
 int8 HOLDING = 10
 int8 HELD = 11
+int8 UNHOLDING = 12
+int8 SUSPENDING = 13
+int8 UNSUSPENDING = 14
+int8 RESETTING = 15
+int8 COMPLETING = 16
+int8 COMPLETE = 17
 
-# Values NOT defined in tag naming guidelines
-int8 RESETTING = 100
-int8 SUSPENDING = 101    # Not enumerated in tag guidelines
-int8 UNSUSPENDING = 102
-int8 CLEARING = 103
-int8 UNHOLDING = 104
-int8 COMPLETING = 105
-int8 COMPLETE = 106
+# Values not defined in tag naming guidelines
+int8 OFF = 100
+int8 ABORTABLE = 101
+int8 STOPPABLE = 102
 
 int8 val

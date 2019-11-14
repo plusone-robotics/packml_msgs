@@ -1,0 +1,21 @@
+# Request an event trigger change from a packml state machine.  The event set is based
+# on the PackML summarized here:
+# https://omac.org/workgroups/packml-unitmachine-implementation-guide/
+# The response is returned as soon as the request is accepted, but not necessarily
+# when the event triggers
+#
+# Enumeration values are based upon tag guidelines, here:
+# https://omac.org/workgroups/packml-unitmachine-implementation-guide/
+
+int8 UNDEFINED = 0
+int8 SC = 1
+int8 HOLD = 2
+int8 UNHOLD = 3
+int8 SUSPEND = 4
+int8 UNSUSPEND = 5
+int8 RESET = 6
+int8 CLEAR = 7
+
+int32 event_id    # Event to send to the state machine
+---
+bool result       # True if event will be processed by the state machine, false otherwise
