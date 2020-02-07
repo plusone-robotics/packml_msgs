@@ -2,6 +2,11 @@
 Changelog for package packml_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Feature core. Added GetState, GetStats, IncrementStat, InvokeStateChange, LoadStats, and SendEvent services. Renamed Transition to SendCommand `#5 <https://github.com/plusone-robotics/packml_msgs/issues/5>`_
+* Contributors: Aaron Wood, Charles Costello
+
 1000.2.0 (2019-11-12)
 ---------------------
 * Initial release separate from packml
